@@ -1,28 +1,22 @@
-import { createRouter, createWebHashHistory } from "vue-router"
- 
+import { createRouter, createWebHashHistory } from 'vue-router'
+
 import HelloWorld from '../components/HelloWorld.vue'
-import About from '../components/About.vue'
-import User from '../components/User.vue'
- 
+import Welcome from '../components/Welcome.vue'
+
 const routes = [
-	// router参数详细看下文
+  { path: '/', component: Welcome },
+  {
+    path: '/helloworld',
+    name: 'helloworld',
+    component: HelloWorld,
+  },
 	{
-		path: "/helloworld",
-		name: "helloworld",
-		component: HelloWorld
-	},
-	// {
-	// 	path: "/about",
-	// 	name: "about",
-	// 	component: About
-	// },
-	// {
-	// 	path: "/user/:uid",  // 动态参数
-	// 	name: "user",
-	// 	component: User
-	// }
+		path: '/clsrtable',
+		name: 'clsrtable',
+		component: () => import('../components/common/clsrTable/index.vue'),
+	}
 ]
 export const router = createRouter({
-	history: createWebHashHistory(),
-	routes: routes
+  history: createWebHashHistory(),
+  routes: routes,
 })
