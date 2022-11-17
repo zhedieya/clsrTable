@@ -9,11 +9,17 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ClsrTable: typeof import('./src/components/common/clsrTable/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElForm: typeof import('element-plus/es')['ElForm']
+    ElFormItem: typeof import('element-plus/es')['ElFormItem']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
+    Grid: typeof import('./src/components/common/Grid/index.vue')['default']
+    GridItem: typeof import('./src/components/common/Grid/components/GridItem.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SearchForm: typeof import('./src/components/common/SearchForm/index.vue')['default']
     Welcome: typeof import('./src/components/Welcome.vue')['default']
   }
 }
