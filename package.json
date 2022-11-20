@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vitejs/plugin-vue-jsx": "^2.1.1",
     "element-plus": "^2.2.21",
     "path": "^0.12.7",
     "vue": "^3.2.41",
