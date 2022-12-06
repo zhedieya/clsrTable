@@ -11,9 +11,9 @@ const routes = [
     component: HelloWorld,
   },
 	{
-		path: '/clsrtable',
-		name: 'clsrtable',
-		component: () => import('../components/common/clsrTable/index.vue'),
+		path: '/usetable',
+		name: 'usetable',
+		component: () => import('@/components/clsrTable/useTable.vue'),
 	}
 ]
 export const router = createRouter({

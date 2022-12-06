@@ -14,7 +14,7 @@ const enterHello = () => {
 }
 const enterTable = () => {
   router.push({
-    name: 'clsrtable',
+    name: 'usetable',
   })
 }
 </script>
