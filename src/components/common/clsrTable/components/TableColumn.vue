@@ -13,8 +13,20 @@ const props = defineProps<{
 }>()
 
 const renderLoop = (item: ColumnProps) => {
-  console.log(item)
-  return <>{<ElTableColumn {...item}></ElTableColumn>}</>
+  return (
+    <>
+      {
+        <ElTableColumn {...item}>
+          {{
+            default: (scope: any) => {
+              if (item.render) return item.render(scope)
+							if (slots[item.prop!]) return slots[item.prop!]!(scope);
+            },
+          }}
+        </ElTableColumn>
+      }
+    </>
+  )
 }
 </script>
 

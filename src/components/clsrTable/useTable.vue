@@ -6,6 +6,10 @@
         <el-button type="primary">新增</el-button>
         <el-button type="primary">删除</el-button>
       </template>
+      <!-- 列表展开行 -->
+			<template #expand="scope">
+				{{ scope.row }}
+			</template>
     </clsrTable>
   </div>
 </template>
@@ -25,17 +29,21 @@ const columns: ColumnProps[] = [
     prop: 'username',
     label: '用户姓名',
     render: (scope) => {
-      return <el-button type="primary">hey</el-button>
+      return (
+        <el-button type="primary" link onClick={() => ElMessage.success('我是通过 tsx 语法渲染的内容，用户姓名为' + ' ' + scope.row.username)}>
+          {scope.row.username}
+        </el-button>
+      )
     },
   },
   {
     prop: 'gender',
     label: '性别',
   },
-  { prop: 'idCard', label: '身份证号' },
-  { prop: 'email', label: '邮箱' },
-  { prop: 'address', label: '居住地址' },
-  { prop: 'operation', label: '操作', fixed: 'right', width: 330 },
+  { prop: 'idCard', label: '身份证号', width: 200 },
+  { prop: 'email', label: '邮箱', width: 200 },
+  { prop: 'address', label: '居住地址', width: 300, align: 'left' },
+  { prop: 'operation', label: '操作', fixed: 'right' },
 ]
 </script>
 
