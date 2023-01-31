@@ -17,6 +17,8 @@
           <slot :name="item.type" :row="scope.row" v-else></slot> <!-- 相当于将usetable.vue里scope.row渲染进去 -->
         </el-table-column>
         <TableColumn v-if="!item.type && item.prop" :column="item">
+          <!-- 渲染剩余插槽 -->
+          <!-- 目前存在的slot是expand和tableHeader -->
           <template v-for="slot in Object.keys($slots)" #[slot]="scope">
             <slot :name="slot" :row="scope.row"></slot>
           </template>

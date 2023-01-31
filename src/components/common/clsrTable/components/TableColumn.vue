@@ -8,6 +8,7 @@ import { ColumnProps } from '@/components/common/clsrTable/interface/index'
 import { ElTableColumn } from 'element-plus'
 
 const slots = useSlots()
+console.log("slots", slots);
 const props = defineProps<{
   column: ColumnProps
 }>()
@@ -19,7 +20,10 @@ const renderLoop = (item: ColumnProps) => {
         <ElTableColumn {...item}>
           {{
             default: (scope: any) => {
-              if (item.render) return item.render(scope)
+              // scope.row: 当前行数据
+              if (item.render) {
+                return item.render(scope)
+              }
 							if (slots[item.prop!]) return slots[item.prop!]!(scope);
             },
           }}
