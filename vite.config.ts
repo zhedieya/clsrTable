@@ -6,6 +6,8 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import ElementPlus from 'unplugin-element-plus/vite'
 import { resolve } from 'path' // npm  install  path  --save
 import vueJsx from '@vitejs/plugin-vue-jsx'
+// ant-design-vue
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 export default defineConfig({
   plugins: [
     vue(),
@@ -13,7 +15,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver(), AntDesignVueResolver()],
     }),
     vueJsx({
       // options are passed on to @vue/babel-plugin-jsx

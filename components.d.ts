@@ -7,6 +7,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AButton: typeof import('ant-design-vue/es')['Button']
+    AntTree: typeof import('./src/components/antTree/antTree.vue')['default']
+    ATree: typeof import('ant-design-vue/es')['Tree']
     ClsrTable: typeof import('./src/components/common/clsrTable/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElForm: typeof import('element-plus/es')['ElForm']
