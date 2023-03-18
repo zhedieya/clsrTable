@@ -14,7 +14,12 @@ const routes = [
 		path: '/usetable',
 		name: 'usetable',
 		component: () => import('@/components/clsrTable/useTable.vue'),
-	}
+	},
+  {
+		path: '/anttree',
+		name: 'anttree',
+		component: () => import('@/components/antTree/antTree.vue'),
+	},
 ]
 export const router = createRouter({
   history: createWebHashHistory(),

@@ -1,7 +1,8 @@
-<template lang="">
+<template>
   <div>
     <el-button type="primary" @click="enterHello">HelloWorld</el-button>
     <el-button type="primary" @click="enterTable">clsrTable</el-button>
+    <el-button type="primary" @click="enterATree">antTree</el-button>
   </div>
 </template>
 <script setup lang="ts">
@@ -15,6 +16,11 @@ const enterHello = () => {
 const enterTable = () => {
   router.push({
     name: 'usetable',
+  })
+}
+const enterATree = () => {
+  router.push({
+    name: 'anttree',
   })
 }
 </script>
