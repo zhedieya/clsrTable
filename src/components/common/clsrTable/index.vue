@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <!-- 表格内容 -->
   <div class="main_table">
     <!-- 表格头部操作按钮 -->
